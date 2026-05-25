@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday, {{ nickname }}!</title>
+  <style>
+    body {
+      margin: 0; padding: 0;
+      background: #fef6ee;
+      font-family: 'Georgia', serif;
+      color: #2d1a0e;
+    }
+    .wrapper {
+      max-width: 600px;
+      margin: 40px auto;
+      background: #fff8f2;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+    .header {
+      background: linear-gradient(135deg, #ff7043, #ff8f00);
+      padding: 48px 32px 32px;
+      text-align: center;
+    }
+    .emoji-big { font-size: 64px; display: block; margin-bottom: 12px; }
+    .header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      color: #fff;
+      letter-spacing: -0.5px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .header p {
+      margin: 8px 0 0;
+      color: rgba(255,255,255,0.88);
+      font-size: 1rem;
+    }
+    .body {
+      padding: 40px 36px;
+    }
+    .greeting {
+      font-size: 1.25rem;
+      line-height: 1.7;
+      color: #3d2010;
+      margin-bottom: 24px;
+    }
+    .highlight {
+      display: inline-block;
+      background: #fff3e0;
+      border-left: 4px solid #ff7043;
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 8px 0 28px;
+      font-style: italic;
+      color: #bf360c;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+    .age-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #ff7043, #ff8f00);
+      color: white;
+      padding: 6px 18px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: bold;
+      margin-bottom: 28px;
+      letter-spacing: 0.5px;
+    }
+    .wishes {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #4a2c14;
+      margin-bottom: 32px;
+    }
+    {% if extra_message %}
+    .extra {
+      background: #fff8f0;
+      border: 1.5px dashed #ffb74d;
+      border-radius: 10px;
+      padding: 18px 22px;
+      margin-bottom: 28px;
+      font-size: 0.97rem;
+      color: #5d3a1a;
+      line-height: 1.7;
+    }
+    {% endif %}
+    .sign-off {
+      font-size: 1rem;
+      color: #6d4c28;
+      border-top: 1px solid #ffe0c4;
+      padding-top: 24px;
+      margin-top: 8px;
+    }
+    .footer {
+      background: #fde8d8;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.78rem;
+      color: #b07040;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Header -->
+    <div class="header">
+      <span class="emoji-big">🎂</span>
+      <h1>Happy Birthday, {{ nickname }}!</h1>
+      <p>Wishing you a wonderful day filled with joy</p>
+    </div>
+
+    <!-- Body -->
+    <div class="body">
+      <p class="greeting">Dear {{ name }},</p>
+
+      {% if age %}
+      <span class="age-badge">🎉 Turning {{ age }} today!</span><br/>
+      {% endif %}
+
+      <div class="highlight">
+        "May this birthday be just the beginning of a year filled with happy moments
+        and beautiful memories."
+      </div>
+
+      <p class="wishes">
+        On this special day, I want you to know how much you mean to me as a {{ relationship }}.
+        Your presence in my life is a gift I cherish deeply. I hope today brings you as
+        much happiness as you bring to everyone around you. 🌟
+      </p>
+
+      <p class="wishes">
+        May all your dreams and wishes come true this year — may it be your best one yet!
+        Here's to celebrating YOU! 🥂
+      </p>
+
+      {% if extra_message %}
+      <div class="extra">
+        💌 A personal note: {{ extra_message }}
+      </div>
+      {% endif %}
+
+      <div class="sign-off">
+        <p>With warm wishes and lots of love,</p>
+        <p><strong>{{ sender_name }}</strong></p>
+        <p style="font-size: 1.4rem; margin: 8px 0;">🎈 🎁 🎊</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      Sent with ❤️ using Birthday Mailer · {{ year }}
+    </div>
+  </div>
+</body>
+</html>

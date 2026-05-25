@@ -1,0 +1,41 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "▶ Run: Send Today's Birthdays",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/birthday_mailer.py",
+      "args": [],
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "🔍 Dry Run (Preview Only)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/birthday_mailer.py",
+      "args": ["--dry-run"],
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "📧 Send Test Email",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/birthday_mailer.py",
+      "args": ["--test"],
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "📋 List Upcoming Birthdays",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/birthday_mailer.py",
+      "args": ["--list"],
+      "console": "integratedTerminal",
+      "justMyCode": true
+    }
+  ]
+}

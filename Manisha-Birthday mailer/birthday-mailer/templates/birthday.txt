@@ -1,0 +1,28 @@
+🎂 Happy Birthday, {{ nickname }}!
+==========================================
+
+Dear {{ name }},
+
+{% if age %}Turning {{ age }} today — what a milestone! 🎉{% endif %}
+
+On this special day, I want you to know how much you mean to me as a {{ relationship }}.
+Your presence in my life is a gift I cherish deeply.
+
+"May this birthday be just the beginning of a year filled with happy moments
+and beautiful memories."
+
+I hope today brings you as much happiness as you bring to everyone around you!
+May all your dreams and wishes come true this year — may it be your best one yet! 🌟
+
+{% if extra_message %}
+A personal note:
+{{ extra_message }}
+{% endif %}
+
+With warm wishes and lots of love,
+{{ sender_name }}
+
+🎈 🎁 🎊
+
+--
+Sent with ❤️ using Birthday Mailer · {{ year }}

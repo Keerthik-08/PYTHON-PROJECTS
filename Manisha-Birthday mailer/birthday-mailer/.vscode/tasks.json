@@ -1,0 +1,40 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Install Dependencies",
+      "type": "shell",
+      "command": "pip install -r requirements.txt",
+      "group": "build",
+      "presentation": { "reveal": "always", "panel": "shared" }
+    },
+    {
+      "label": "Setup Project",
+      "type": "shell",
+      "command": "cp data/contacts.example.json data/contacts.json && cp .env.example .env && echo 'Done! Open .env and data/contacts.json to configure.'",
+      "group": "build",
+      "presentation": { "reveal": "always", "panel": "shared" }
+    },
+    {
+      "label": "List Upcoming Birthdays",
+      "type": "shell",
+      "command": "python birthday_mailer.py --list",
+      "group": "test",
+      "presentation": { "reveal": "always", "panel": "shared" }
+    },
+    {
+      "label": "Dry Run",
+      "type": "shell",
+      "command": "python birthday_mailer.py --dry-run",
+      "group": "test",
+      "presentation": { "reveal": "always", "panel": "shared" }
+    },
+    {
+      "label": "Add Cron Job (Daily at 8 AM)",
+      "type": "shell",
+      "command": "(crontab -l 2>/dev/null; echo \"0 8 * * * cd $(pwd) && python birthday_mailer.py >> logs/cron.log 2>&1\") | crontab -",
+      "group": "none",
+      "presentation": { "reveal": "always", "panel": "shared" }
+    }
+  ]
+}

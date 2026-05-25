@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Alice Johnson",
+    "nickname": "Ali",
+    "email": "alice@example.com",
+    "dob": "1992-05-23",
+    "relationship": "best friend",
+    "sender_name": "Your Name Here",
+    "extra_message": "Remember our road trip last summer? Here's to many more adventures!"
+  },
+  {
+    "name": "Bob Smith",
+    "nickname": "Bob",
+    "email": "bob@example.com",
+    "dob": "1985-12-01",
+    "relationship": "colleague",
+    "sender_name": "Your Name Here",
+    "extra_message": ""
+  },
+  {
+    "name": "Mom",
+    "nickname": "Mom",
+    "email": "mom@example.com",
+    "dob": "1965-08-15",
+    "relationship": "mother",
+    "sender_name": "Your Name Here",
+    "extra_message": "You are the best mom in the world. Love you to the moon and back! 🌙"
+  },
+  {
+    "name": "Dad",
+    "nickname": "Dad",
+    "email": "dad@example.com",
+    "dob": "1962-03-22",
+    "relationship": "father",
+    "sender_name": "Your Name Here",
+    "extra_message": "Thanks for always being my hero. Hope you have a fantastic day!"
+  },
+  {
+    "name": "Priya Sharma",
+    "nickname": "Priya",
+    "email": "priya@example.com",
+    "dob": "1998-07-04",
+    "relationship": "friend",
+    "sender_name": "Your Name Here",
+    "extra_message": ""
+  }
+]
